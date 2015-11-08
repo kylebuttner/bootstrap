@@ -1,0 +1,20 @@
+.jumbotron {
+  background-image: url('https://github.com/kylebuttner/kylebuttner.github.io/blob/master/css/img/ggb.jpg?raw=true');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 20em;
+}
+
+.jumbotron h1 {
+  font-family: "Arimo", sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 500;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 100%;
+  left: 0;
+  bottom: 4em;
+  position: absolute;
+}
