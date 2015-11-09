@@ -1,20 +1,36 @@
 .jumbotron {
-  background-image: url('https://github.com/kylebuttner/kylebuttner.github.io/blob/master/css/img/ggb.jpg?raw=true');
+  background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),
+    url('https://github.com/kylebuttner/kylebuttner.github.io/blob/master/css/img/ggb.jpg?raw=true');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  padding: 20em;
+  padding: 25em;
 }
 
 .jumbotron h1 {
-  font-family: "Arimo", sans-serif;
-  text-transform: uppercase;
+  font-family: 'Roboto', sans-serif;
   text-align: center;
-  font-weight: 500;
   color: #fff;
-  background-color: rgba(0, 0, 0, 0.4);
-  width: 100%;
-  left: 0;
-  bottom: 4em;
+  font-weight: 600;
+  bottom: 3em;
   position: absolute;
+  width: 100%;
+  left:0;
+  /* background-color: rgba(0, 0, 0, 0.4); */
+}
+
+#about {
+  padding-top: 7em;
+  padding-bottom: 7em;
+  font-family: 'Meriweather', serif;
+  font-size: 150%;
+}
+
+#info{
+  font-family: 'Meriweather', serif;
+  font-size: 100%;
+}
+
+#social {
+  list-style: none;
 }
