@@ -8,11 +8,11 @@
 }
 
 .jumbotron h1 {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Cabin', sans-serif;
   text-align: center;
   color: #fff;
-  font-weight: 600;
-  bottom: 3em;
+  font-weight: 100;
+  bottom: 2em;
   position: absolute;
   width: 100%;
   left:0;
