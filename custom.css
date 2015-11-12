@@ -9,10 +9,11 @@
 
 .jumbotron h1 {
   font-family: 'Cabin', sans-serif;
-  text-align: center;
+  text-align: right;
+  padding-right: 3.5em;
   color: #fff;
   font-weight: 100;
-  bottom: 2em;
+  bottom: 4.75em;
   position: absolute;
   width: 100%;
   left:0;
