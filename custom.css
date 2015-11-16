@@ -22,7 +22,7 @@
 
 #about {
   padding-top: 7em;
-  padding-bottom: 7em;
+  padding-bottom: 3em;
   font-family: 'Meriweather', serif;
   font-size: 150%;
 }
@@ -34,4 +34,11 @@
 
 #social {
   list-style: none;
+}
+
+#lastfm {
+  text-align: center;
+  padding-bottom: 3em;
+  font-family: 'Meriweather', serif;
+  font-size: 150%;
 }
