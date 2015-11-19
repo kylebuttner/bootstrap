@@ -1,86 +1,28 @@
 $(function () {
     $('.container #chart1').highcharts({
-        credits: {
-          enabled: false
-        },
-        chart: {
-            type: 'bar'
-        },
         title: {
-            text: 'Carb Consumption'
+            text: 'FAC Meetup Attendance'
         },
+
+        subtitle: {
+            text: 'When resizing the window or the frame, the chart should resize'
+        },
+
+
         xAxis: {
-            categories: ['Puff Pastry', 'Cake', 'Baguette']
+            categories: ['Feb 2015','Feb 2015','Feb 2015','Feb 2015','Mar 2015','Mar 2015','Mar 2015','Apr 2015','May 2015','Jun 2015','Jun 2015','Jun 2015','Jun 2015','Jun 2015','Jul 2015','Jul 2015','Jul 2015','Jul 2015','Aug 2015','Aug 2015','Aug 2015','Sep 2015','Sep 2015','Oct 2015','Oct 2015','Oct 2015','Nov 2015','Nov 2015','Nov 2015']
         },
+
         yAxis: {
-            title: {
-                text: 'Carb Consumption'
-            }
+          title: {
+            text: 'Attendance'
+          }
         },
+
         series: [{
-            name: 'Yojin',
-            data: [1, 0, 4]
-        }, {
-            name: 'Kyle',
-            data: [5, 7, 3]
+            name: 'Coding for Everyone',
+            data: [34,23,23,41,23,25,41,36,40,40,40,40,35,33,25,28,39,40,43,37,39,39,40,33,39,37,32,26,40]
+
         }]
     });
-});
-
-var options = {
-    chart: {
-        renderTo: '.container',
-        defaultSeriesType: 'column'
-    },
-    title: {
-        text: 'FAC Meetup Attendance Over Time'
-    },
-    xAxis: {
-        categories: []
-    },
-    yAxis: {
-        title: {
-            text: 'Attendees'
-        }
-    },
-    series: []
-};
-
-$.get('data.csv', function(data) {
-    // Split the lines
-    var lines = data.split('\n');
-
-    // Iterate over the lines and add categories or series
-    $.each(lines, function(lineNo, line) {
-        var items = line.split(',');
-
-        // header line containes categories
-        if (lineNo == 0) {
-            $.each(items, function(itemNo, item) {
-                if (itemNo > 0) options.xAxis.categories.push(item);
-            });
-        }
-
-        // the rest of the lines contain data with their name in the first
-        // position
-        else {
-            var series = {
-                data: []
-            };
-            $.each(items, function(itemNo, item) {
-                if (itemNo == 0) {
-                    series.name = item;
-                } else {
-                    series.data.push(parseFloat(item));
-                }
-            });
-
-            options.series.push(series);
-
-        }
-
-    });
-
-    // Create the chart
-    var chart = new Highcharts.Chart(options);
 });
