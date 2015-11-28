@@ -1,16 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
+<!-- I bootstrap always. -->
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-
   <!-- Optional theme -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+<!-- and jquery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+<!-- list script -->
 <script>
     $(document).ready(function () {
+
+    // load user data from gitter api, create codewars link to authored kata, then append links to page
     $.getJSON("https://api.gitter.im/v1/rooms/5544bb8e15522ed4b3dfd511/users?access_token=fbc5ffbc062fc47817ed0156c13b99f90eaac1b6", function (result) {
         $.each(result, function (i, field) {
+
             var url = "http://www.codewars.com/users/" + field['username'];
             var urllong = "<a href='" + url + "/authored'>" + field['username'] + "</a>";
 
@@ -28,6 +35,8 @@
         <p>In order from oldest to newest members (I think).</p>
         <p>Also, the script generating this list assumes users have the same usernames for Gitter and Codewars, so there are some broken links when that isn't the case.</p>
     <div id = "names"></div>
+    <p>Here's a <a href="https://github.com/kylebuttner/kylebuttner.github.io/blob/master/katas.html">link</a> to
+    the script that makes this list. Bit messy but simple and does the trick!</p>
     </div>
 </body>
 </html>
