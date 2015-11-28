@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+    $.getJSON("https://api.gitter.im/v1/rooms/5544bb8e15522ed4b3dfd511/users?access_token=fbc5ffbc062fc47817ed0156c13b99f90eaac1b6", function (result) {
+        $.each(result, function (i, field) {
+            var url = "http://www.codewars.com/users/" + field['username'];
+            var urllong = "<a href='" + url + "/authored'>" + field['username'] + "</a>";
+
+            $("div #names").append(urllong + "<br/>");
+
+        });
+    });
+});
+</script>
+</head>
+
+<body>
+    <div class = 'container'>
+        <h2>Links to katas created by Codingforeveryone</h2>
+        <p>In order from oldest to newest members</p>
+    <div id = "names"></div>
+        <p>This page assumes users have the same usernames for Gitter and Codewars, so there may be some broken links when that isn't the case.</p>
+    </div>
+</body>
+</html>
